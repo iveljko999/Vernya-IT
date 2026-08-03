@@ -1,0 +1,328 @@
+/* ============================================================
+   Pricing page — extends css/style.css. Uses the shared design
+   tokens (--neon, --ease-spring, etc.) for everything except the
+   summary panel, which is a deliberately fixed dark "code editor"
+   surface (VS Code Dark+ inspired) regardless of site theme.
+   ============================================================ */
+
+.pricing-builder {
+  padding-top: 20px;
+}
+
+.pricing-builder-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.pricing-builder-head .section-title { margin-bottom: 0; }
+
+/* ---------- billing toggle ---------- */
+.billing-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.billing-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: var(--bg-soft);
+}
+.billing-btn {
+  padding: 9px 20px;
+  border-radius: 100px;
+  border: none;
+  background: none;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: background .3s var(--ease-out), color .3s var(--ease-out);
+}
+.billing-btn.is-active { background: var(--neon); color: var(--ink); }
+.billing-btn:not(.is-active):hover { color: var(--text); }
+.billing-note {
+  font-size: 12.5px;
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+/* ---------- layout ---------- */
+.pricing-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ---------- service cards ---------- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.pricing-grid .pricing-card:last-child { grid-column: 1 / -1; }
+
+.pricing-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 26px 24px;
+  border-radius: 18px;
+  background: var(--bg-soft);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text);
+  transition: transform .3s var(--ease-spring), border-color .3s var(--ease-out), box-shadow .35s var(--ease-out);
+}
+.pricing-card:hover { border-color: rgba(0,255,102,0.4); }
+.pricing-card:active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) {
+  .pricing-card:hover { transform: translateY(-3px); }
+}
+.pricing-card.is-selected {
+  border-color: var(--neon);
+  box-shadow: 0 0 0 1px var(--neon), 0 10px 30px rgba(0,255,102,0.22);
+}
+
+.pricing-card-check {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  transition: background .25s var(--ease-out), border-color .25s var(--ease-out), color .25s var(--ease-out), transform .3s var(--ease-spring);
+}
+.pricing-card.is-selected .pricing-card-check {
+  background: var(--neon);
+  border-color: var(--neon);
+  color: var(--ink);
+  transform: scale(1.08);
+}
+
+.pricing-card .card-icon { margin-bottom: 18px; }
+.pricing-card h3 { font-size: 18px; margin-bottom: 6px; padding-right: 26px; }
+.pricing-card-desc { color: var(--text-dim); font-size: 14px; font-weight: 500; margin-bottom: 14px; }
+.pricing-card-price {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neon-deep);
+}
+
+/* ============================================================
+   Summary panel — fixed dark "code editor" surface. Colors here
+   are intentionally hardcoded (not theme tokens) so it reads as
+   a terminal window sitting on the page, in both light and dark
+   site themes — same idea as a code snippet card on a dev blog.
+   ============================================================ */
+.summary-panel {
+  position: sticky;
+  top: 100px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1e1e1e;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+.summary-close { display: none; }
+
+.best-value-badge {
+  position: absolute;
+  top: -13px;
+  right: 20px;
+  z-index: 2;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: var(--grad);
+  color: #06070a;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: scale(0.85);
+  pointer-events: none;
+  transition: opacity .3s var(--ease-spring), transform .3s var(--ease-spring);
+}
+.best-value-badge.is-visible { opacity: 1; transform: scale(1); pointer-events: auto; }
+.best-value-badge.pop { animation: badgePop .5s var(--ease-spring); }
+@keyframes badgePop {
+  0% { transform: scale(0.85); }
+  55% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #2d2d2d;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+.terminal-filename {
+  margin-left: 6px;
+  font-size: 12.5px;
+  color: #9d9d9d;
+}
+
+.terminal-body { padding: 22px 20px 20px; }
+
+.summary-empty {
+  color: #808080;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.summary-list { display: grid; gap: 9px; margin-bottom: 16px; }
+.summary-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+.summary-list .key { color: #9cdcfe; }
+.summary-list .val { color: #ce9178; white-space: nowrap; }
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 9px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 13.5px;
+}
+.summary-row .key { color: #9cdcfe; }
+.summary-row .val { color: #b5cea8; font-weight: 600; }
+.discount-val { color: #4ec9b0 !important; }
+.summary-total-row {
+  border-top: 1px solid rgba(255,255,255,0.14);
+  margin-top: 4px;
+  padding-top: 14px;
+}
+.summary-total-row .key { color: #9cdcfe; font-size: 14px; }
+.total-val {
+  color: var(--neon) !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+.total-suffix { font-size: 13px; color: #808080; font-weight: 500; margin-left: 2px; }
+
+.summary-note {
+  margin-top: 14px;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: #6a9955;
+}
+
+.pricing-cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: 18px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+.pricing-cta[disabled] { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+
+/* ---------- mobile summary bar ---------- */
+.mobile-summary-bar { display: none; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+  .pricing-layout { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-grid .pricing-card:last-child { grid-column: auto; }
+
+  .summary-panel {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    top: auto;
+    z-index: 80;
+    max-height: 82vh;
+    overflow-y: auto;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(100%);
+    transition: transform .2s var(--ease-out); /* closing: fast, system-responding-to-dismiss */
+  }
+  .summary-panel.is-drawer-open {
+    transform: translateY(0);
+    transition: transform .4s var(--ease-spring); /* opening: deliberate */
+  }
+  .summary-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: none;
+    color: #d4d4d4;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .best-value-badge { top: 12px; left: 16px; right: auto; }
+
+  .mobile-summary-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    position: fixed;
+    left: 16px; right: 16px; bottom: 16px;
+    z-index: 70;
+    padding: 14px 18px;
+    border-radius: 100px;
+    background: var(--ink);
+    color: #fff;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  }
+  .mobile-bar-expand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--neon);
+    color: var(--ink);
+    border: none;
+    cursor: pointer;
+  }
+
+  main { padding-bottom: 90px; }
+}
+
+@media (max-width: 560px) {
+  .pricing-builder-head { align-items: flex-start; }
+  .billing-toggle { align-items: flex-start; }
+}

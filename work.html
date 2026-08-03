@@ -24,6 +24,7 @@
   <nav class="nav-links">
     <a href="about.html" data-i18n="nav.about">About</a>
     <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
     <a href="work.html" data-i18n="nav.work">Work</a>
     <a href="contact.html" data-i18n="nav.contact">Contact</a>
   </nav>
@@ -42,6 +43,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="about.html" data-i18n="nav.about">About</a>
   <a href="services.html" data-i18n="nav.services">Services</a>
+  <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
   <a href="work.html" data-i18n="nav.work">Work</a>
   <a href="contact.html" data-i18n="nav.contact">Contact</a>
   <a href="contact.html" data-i18n="nav.sayhi.mobile">Say hi ↗</a>
@@ -126,10 +128,19 @@
     <a href="https://www.instagram.com/vernya_it/" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.threads.net/@vernya_it" target="_blank" rel="noopener">Threads</a>
   </div>
+  <div class="theme-switch">
+    <button class="theme-btn is-active" data-theme-btn="light" aria-label="Light theme">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8l1.8-1.8M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <button class="theme-btn" data-theme-btn="dark" aria-label="Dark theme">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
   <p class="footer-copy"><span data-i18n="footer.copyPrefix">©</span> <span id="year"></span> Vernya IT. <span data-i18n="footer.copySuffix">All rights reserved.</span></p>
 </footer>
 
 <script src="js/script.js"></script>
 <script src="js/i18n.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>

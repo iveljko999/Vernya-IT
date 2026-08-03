@@ -158,7 +158,42 @@ en: {
   "work.card3.category": "Category: UI/UX Design",
   "work.cta.kicker": "Be the first",
   "work.cta.title": "Want to be our<br/>first case study?",
-  "work.cta.sub": "Start a project with us now and you could be the one we feature here."
+  "work.cta.sub": "Start a project with us now and you could be the one we feature here.",
+
+  "nav.pricing": "Pricing",
+  "pricing.hero.titlePre": "Build a plan ",
+  "pricing.hero.titleAccent": "that grows with you.",
+  "pricing.hero.sub": "This is our ongoing retainer model — mix and match services for continuous support. Need a one-off project instead? Head to Contact and let's scope it.",
+  "pricing.builder.kicker": "Build your plan",
+  "pricing.builder.title": "Pick your services",
+  "pricing.billing.monthly": "Monthly",
+  "pricing.billing.annual": "Annual",
+  "pricing.billing.annualNote": "Save an extra 10% billed annually",
+
+  "pricing.svc.web.desc": "Ongoing updates and iteration on your website or web app.",
+  "pricing.svc.mobile.desc": "Ongoing updates and iteration on your iOS/Android app.",
+  "pricing.svc.uiux.desc": "Continuous design support as your product evolves.",
+  "pricing.svc.support.title": "Support & Maintenance",
+  "pricing.svc.support.desc": "Monitoring, bug fixes, and dependable uptime.",
+  "pricing.svc.ai.title": "AI Consulting",
+  "pricing.svc.ai.desc": "Process automation and AI integration strategy.",
+
+  "pricing.startingAt": "Starting at",
+  "pricing.perMo": "/mo",
+  "pricing.customQuote": "Custom Quote",
+
+  "pricing.summary.title": "plan.json",
+  "pricing.summary.empty": "Select a service to start building your plan.",
+  "pricing.summary.subtotal": "subtotal",
+  "pricing.summary.discount": "discount",
+  "pricing.summary.savings": "savings",
+  "pricing.summary.total": "total",
+  "pricing.summary.note": "* AI Consulting is an estimate — final pricing confirmed after a free consultation.",
+  "pricing.badge": "Full-Stack Partner",
+
+  "pricing.cta.select": "Select a service",
+  "pricing.cta.subscribe": "Subscribe",
+  "pricing.cta.quote": "Request a Custom Quote"
 },
 
 sr: {
@@ -320,9 +355,46 @@ sr: {
   "work.card3.category": "Kategorija: UI/UX dizajn",
   "work.cta.kicker": "Budite prvi",
   "work.cta.title": "Želite da budete naša<br/>prva studija slučaja?",
-  "work.cta.sub": "Pokrenite projekat sa nama sada i možda baš vi budete ovde predstavljeni."
+  "work.cta.sub": "Pokrenite projekat sa nama sada i možda baš vi budete ovde predstavljeni.",
+
+  "nav.pricing": "Cene",
+  "pricing.hero.titlePre": "Napravite plan ",
+  "pricing.hero.titleAccent": "koji raste sa vama.",
+  "pricing.hero.sub": "Ovo je naš model kontinuirane saradnje — kombinujte usluge za stalnu podršku. Treba vam jednokratan projekat umesto toga? Idite na Kontakt i definišimo obim.",
+  "pricing.builder.kicker": "Napravite plan",
+  "pricing.builder.title": "Izaberite usluge",
+  "pricing.billing.monthly": "Mesečno",
+  "pricing.billing.annual": "Godišnje",
+  "pricing.billing.annualNote": "Uštedite dodatnih 10% uz godišnje plaćanje",
+
+  "pricing.svc.web.desc": "Kontinuirana nadogradnja i unapređenje vašeg sajta ili web aplikacije.",
+  "pricing.svc.mobile.desc": "Kontinuirana nadogradnja i unapređenje vaše iOS/Android aplikacije.",
+  "pricing.svc.uiux.desc": "Stalna dizajn podrška dok vaš proizvod raste.",
+  "pricing.svc.support.title": "Podrška i održavanje",
+  "pricing.svc.support.desc": "Monitoring, ispravke grešaka i pouzdana dostupnost.",
+  "pricing.svc.ai.title": "AI konsalting",
+  "pricing.svc.ai.desc": "Automatizacija procesa i strategija AI integracije.",
+
+  "pricing.startingAt": "Od",
+  "pricing.perMo": "/mes",
+  "pricing.customQuote": "Ponuda po dogovoru",
+
+  "pricing.summary.title": "plan.json",
+  "pricing.summary.empty": "Izaberite uslugu da započnete plan.",
+  "pricing.summary.subtotal": "međuzbir",
+  "pricing.summary.discount": "popust",
+  "pricing.summary.savings": "ušteda",
+  "pricing.summary.total": "ukupno",
+  "pricing.summary.note": "* AI konsalting je procena — konačna cena se potvrđuje nakon besplatne konsultacije.",
+  "pricing.badge": "Full-Stack partner",
+
+  "pricing.cta.select": "Izaberite uslugu",
+  "pricing.cta.subscribe": "Pretplati se",
+  "pricing.cta.quote": "Zatraži ponudu"
 }
 };
+
+window.I18N = I18N;
 
 function applyLanguage(lang) {
   if (!I18N[lang]) lang = 'en';
@@ -338,6 +410,11 @@ function applyLanguage(lang) {
     } else {
       el.textContent = value;
     }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const value = I18N[lang][el.dataset.i18nPlaceholder];
+    if (value !== undefined) el.placeholder = value;
   });
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {

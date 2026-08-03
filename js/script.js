@@ -131,20 +131,32 @@ const splitText = (function splitTextModule() {
 })();
 
 // ---------- scroll reveal ----------
-const revealEls = document.querySelectorAll('[data-reveal]');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const siblings = [...el.parentElement.querySelectorAll('[data-reveal]')];
-      const index = siblings.indexOf(el);
-      el.style.transitionDelay = `${Math.min(index, 4) * 90}ms`;
-      el.classList.add('in-view');
-      io.unobserve(el);
-    }
-  });
-}, { threshold: 0.2 });
-revealEls.forEach(el => io.observe(el));
+const scrollReveal = (function scrollRevealModule() {
+  const observed = new WeakSet();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const siblings = [...el.parentElement.querySelectorAll('[data-reveal]')];
+        const index = siblings.indexOf(el);
+        el.style.transitionDelay = `${Math.min(index, 4) * 70}ms`;
+        el.classList.add('in-view');
+        io.unobserve(el);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  function init() {
+    document.querySelectorAll('[data-reveal]').forEach((el) => {
+      if (observed.has(el)) return;
+      observed.add(el);
+      io.observe(el);
+    });
+  }
+
+  init();
+  return { init };
+})();
 
 // ---------- animated counters ----------
 const counters = document.querySelectorAll('[data-counter]');
@@ -248,12 +260,13 @@ if (!isCoarse) {
     ['0,255,102', 0.16],  // neon green
     ['0,204,82', 0.13],   // deeper green
     ['0,255,140', 0.11],  // bright mint
-    ['10,10,10', 0.05],   // ink, for depth
+    ['10,10,10', 0.05],   // ink, for depth (swapped to light in dark theme)
   ];
 
   const blobs = colors.map((c, i) => ({
     color: c[0],
     alpha: c[1],
+    depth: i === colors.length - 1,
     baseX: 0.15 + Math.random() * 0.7,
     baseY: 0.1 + Math.random() * 0.6,
     r: 0.28 + Math.random() * 0.16,
@@ -262,6 +275,9 @@ if (!isCoarse) {
     driftX: 0.12 + Math.random() * 0.08,
     driftY: 0.1 + Math.random() * 0.08,
   }));
+
+  let isDark = document.documentElement.dataset.theme === 'dark';
+  window.addEventListener('vernya:themechange', (e) => { isDark = e.detail.theme === 'dark'; });
 
   let targetMx = 0.5, targetMy = 0.35;
   let mx = 0.5, my = 0.35;
@@ -286,10 +302,11 @@ if (!isCoarse) {
       const x = (b.baseX + Math.sin(angle) * b.driftX + (mx - 0.5) * 0.06) * w;
       const y = (b.baseY + Math.cos(angle * 0.8) * b.driftY + (my - 0.5) * 0.06) * h;
       const r = b.r * Math.max(w, h) * (0.9 + Math.sin(angle * 1.3) * 0.08);
+      const color = b.depth && isDark ? '255,255,255' : b.color;
 
       const grad = ctx.createRadialGradient(x, y, 0, x, y, r);
-      grad.addColorStop(0, `rgba(${b.color}, ${b.alpha})`);
-      grad.addColorStop(1, `rgba(${b.color}, 0)`);
+      grad.addColorStop(0, `rgba(${color}, ${b.alpha})`);
+      grad.addColorStop(1, `rgba(${color}, 0)`);
       ctx.fillStyle = grad;
       ctx.beginPath();
       ctx.arc(x, y, r, 0, Math.PI * 2);
@@ -426,10 +443,13 @@ if (!isCoarse) {
   wrap.addEventListener('mouseleave', () => { mx = -1; my = -1; });
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let isDark = document.documentElement.dataset.theme === 'dark';
+  window.addEventListener('vernya:themechange', (e) => { isDark = e.detail.theme === 'dark'; });
 
   function step() {
     ctx.clearRect(0, 0, w, h);
     const unit = Math.max(w, h);
+    const lineRGB = isDark ? '255,255,255' : '10,10,10';
 
     nodes.forEach((n) => {
       if (!reduceMotion) {
@@ -457,7 +477,7 @@ if (!isCoarse) {
         const d = Math.hypot(dx, dy);
         if (d < LINK_DIST) {
           const alpha = (1 - d / LINK_DIST) * 0.5;
-          ctx.strokeStyle = `rgba(10,10,10,${alpha * 0.35})`;
+          ctx.strokeStyle = `rgba(${lineRGB},${alpha * 0.35})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(a.x * w, a.y * h);
@@ -483,4 +503,4 @@ if (!isCoarse) {
 })();
 
 // ---------- expose for i18n reinit ----------
-window.VernyaAnim = { letterSwap, splitText };
+window.VernyaAnim = { letterSwap, splitText, scrollReveal };
