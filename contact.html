@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Vernya IT</title>
+<meta name="description" content="Start a project with Vernya IT. DM us on Instagram or Threads — no forms, no gatekeeping." />
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-dot" id="cursorDot"><span class="cursor-ring"></span></div>
+
+<header class="nav" id="nav">
+  <a href="index.html" class="brand">
+    <img src="assets/logo.svg" alt="Vernya IT logo" width="34" height="34" />
+    <span>Vernya <em>IT</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="work.html" data-i18n="nav.work">Work</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="lang-switch">
+    <button class="lang-btn is-active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="sr">SR</button>
+  </div>
+  <a class="btn btn-ghost magnetic" href="contact.html" data-i18n="nav.sayhi">
+    <span>Say hi</span>
+  </a>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="about.html" data-i18n="nav.about">About</a>
+  <a href="services.html" data-i18n="nav.services">Services</a>
+  <a href="work.html" data-i18n="nav.work">Work</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="contact.html" data-i18n="nav.sayhi.mobile">Say hi ↗</a>
+  <div class="lang-switch lang-switch-mobile">
+    <button class="lang-btn is-active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="sr">SR</button>
+  </div>
+</div>
+
+<main>
+
+  <section class="page-hero">
+    <canvas class="network-canvas" id="networkCanvas"></canvas>
+    <div class="breadcrumb" data-reveal>
+      <a href="index.html" data-i18n="breadcrumb.home">Home</a><span>/</span><span data-i18n="nav.contact">Contact</span>
+    </div>
+    <h1 class="page-hero-title" data-reveal>
+      <span data-i18n="contact.hero.titlePre">Let's build </span><span class="accent" data-i18n="contact.hero.titleAccent">something great.</span>
+    </h1>
+    <p class="page-hero-sub" data-reveal data-i18n="contact.hero.sub">
+      We keep it simple — no long forms, no discovery-call funnel. Send us a DM
+      and let's talk about your project.
+    </p>
+  </section>
+
+  <section style="padding-top: 20px;">
+    <div class="contact-grid">
+      <div class="contact-card" data-reveal>
+        <h3 data-i18n="contact.card.title">Reach us directly</h3>
+        <div class="contact-list">
+          <a class="contact-row" href="https://www.instagram.com/vernya_it/" target="_blank" rel="noopener">
+            <span data-i18n="contact.row.instagram">Instagram — @vernya_it</span>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="contact-row" href="https://www.threads.net/@vernya_it" target="_blank" rel="noopener">
+            <span data-i18n="contact.row.threads">Threads — @vernya_it</span>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <a class="btn btn-primary magnetic" href="https://www.instagram.com/vernya_it/" target="_blank" rel="noopener" style="width:100%; justify-content:center;">
+          <span data-i18n="btn.dmInstagram">DM us on Instagram</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div data-reveal>
+        <p class="section-kicker" data-i18n="contact.tips.kicker">In your message</p>
+        <h2 class="section-title" data-i18n="contact.tips.title">What to include</h2>
+        <ul class="tips-list">
+          <li data-i18n="contact.tip1">What you're building — web, mobile, UI/UX, or all three</li>
+          <li data-i18n="contact.tip2">Rough timeline and whether there's a hard launch date</li>
+          <li data-i18n="contact.tip3">Budget range, even a loose one — it helps us scope fast</li>
+          <li data-i18n="contact.tip4">Links to anything that already exists: a site, a deck, a Figma file</li>
+        </ul>
+        <div class="trust-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span data-i18n="contact.trust">Got an NDA? Send it over — we're happy to sign before any details are shared. We typically reply within 24 hours.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <img src="assets/logo.svg" alt="Vernya IT logo" width="28" height="28" />
+    <span>Vernya <em>IT</em></span>
+  </div>
+  <p class="footer-tag" data-i18n="footer.tag">We build. You grow.</p>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/vernya_it/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.threads.net/@vernya_it" target="_blank" rel="noopener">Threads</a>
+  </div>
+  <p class="footer-copy"><span data-i18n="footer.copyPrefix">©</span> <span id="year"></span> Vernya IT. <span data-i18n="footer.copySuffix">All rights reserved.</span></p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/i18n.js"></script>
+</body>
+</html>

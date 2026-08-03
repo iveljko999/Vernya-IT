@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services — Vernya IT</title>
+<meta name="description" content="What Vernya IT builds: web design & development, mobile app development, and UI/UX design." />
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-dot" id="cursorDot"><span class="cursor-ring"></span></div>
+
+<header class="nav" id="nav">
+  <a href="index.html" class="brand">
+    <img src="assets/logo.svg" alt="Vernya IT logo" width="34" height="34" />
+    <span>Vernya <em>IT</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="work.html" data-i18n="nav.work">Work</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="lang-switch">
+    <button class="lang-btn is-active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="sr">SR</button>
+  </div>
+  <a class="btn btn-ghost magnetic" href="contact.html" data-i18n="nav.sayhi">
+    <span>Say hi</span>
+  </a>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="about.html" data-i18n="nav.about">About</a>
+  <a href="services.html" data-i18n="nav.services">Services</a>
+  <a href="work.html" data-i18n="nav.work">Work</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="contact.html" data-i18n="nav.sayhi.mobile">Say hi ↗</a>
+  <div class="lang-switch lang-switch-mobile">
+    <button class="lang-btn is-active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="sr">SR</button>
+  </div>
+</div>
+
+<main>
+
+  <section class="page-hero">
+    <canvas class="network-canvas" id="networkCanvas"></canvas>
+    <div class="breadcrumb" data-reveal>
+      <a href="index.html" data-i18n="breadcrumb.home">Home</a><span>/</span><span data-i18n="nav.services">Services</span>
+    </div>
+    <h1 class="page-hero-title" data-reveal>
+      <span data-i18n="services.hero.titlePre">Everything you need to go </span><span class="accent" data-i18n="services.hero.titleAccent">from idea to shipped product.</span>
+    </h1>
+    <p class="page-hero-sub" data-reveal data-i18n="services.hero.sub">
+      Three disciplines, one team. We don't hand your project between departments —
+      the people who design it are the people who build it.
+    </p>
+  </section>
+
+  <section style="padding-top: 40px;">
+    <div class="service-block" data-reveal>
+      <div>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3 data-i18n="svc.web.title">Web Design &amp; Development</h3>
+        <p data-i18n="svc.web.descLong">Fast, modern, pixel-precise websites and web apps — built to convert visitors and built to last.</p>
+      </div>
+      <ul class="feature-list">
+        <li data-i18n="svc.web.f1">Marketing sites, product landing pages, and full web apps</li>
+        <li data-i18n="svc.web.f2">Design systems that keep growing products consistent</li>
+        <li data-i18n="svc.web.f3">Performance-first builds: fast loads, clean Lighthouse scores</li>
+        <li data-i18n="svc.web.f4">CMS &amp; e-commerce integrations when you need to self-serve content</li>
+        <li data-i18n="svc.web.f5">SEO-friendly structure and semantic markup from day one</li>
+      </ul>
+    </div>
+
+    <div class="service-block" data-reveal>
+      <div>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 19h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3 data-i18n="svc.mobile.title">Mobile App Development</h3>
+        <p data-i18n="svc.mobile.descLong">Native-feel iOS &amp; Android apps engineered for smooth performance and real, measurable growth.</p>
+      </div>
+      <ul class="feature-list">
+        <li data-i18n="svc.mobile.f1">Cross-platform builds that still feel native on each OS</li>
+        <li data-i18n="svc.mobile.f2">Onboarding, auth, and payments done right the first time</li>
+        <li data-i18n="svc.mobile.f3">Push notifications, offline support, and app-store readiness</li>
+        <li data-i18n="svc.mobile.f4">Analytics wired in so you can see what's actually working</li>
+        <li data-i18n="svc.mobile.f5">Ongoing releases — we don't disappear after v1.0</li>
+      </ul>
+    </div>
+
+    <div class="service-block" data-reveal>
+      <div>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 13c1 1.5 2.5 2 4 2s3-.5 4-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 9.5h.01M15 9.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3 data-i18n="svc.uiux.title">UI/UX Design</h3>
+        <p data-i18n="svc.uiux.descLong">Interfaces that feel obvious in hindsight — researched, tested, and crafted down to the last detail.</p>
+      </div>
+      <ul class="feature-list">
+        <li data-i18n="svc.uiux.f1">User research and flow-mapping before a single pixel is placed</li>
+        <li data-i18n="svc.uiux.f2">Wireframes through to high-fidelity, developer-ready screens</li>
+        <li data-i18n="svc.uiux.f3">Interaction &amp; motion design that make products feel alive</li>
+        <li data-i18n="svc.uiux.f4">Design QA during build, so nothing gets lost in translation</li>
+        <li data-i18n="svc.uiux.f5">Accessibility considered from the first draft, not bolted on later</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-blob" aria-hidden="true"></div>
+    <p class="section-kicker" data-reveal data-i18n="services.cta.kicker">Next step</p>
+    <h2 class="cta-title" data-reveal data-i18n="services.cta.title" data-i18n-html="true">Not sure which one<br/>you need?</h2>
+    <p class="cta-sub" data-reveal data-i18n="services.cta.sub">Tell us what you're building — we'll tell you where to start.</p>
+    <div class="hero-cta" data-reveal>
+      <a class="btn btn-primary magnetic" href="contact.html">
+        <span data-i18n="btn.startProject">Start a project</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn-outline magnetic" href="index.html">
+        <span data-i18n="btn.backHome">Back to home</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <img src="assets/logo.svg" alt="Vernya IT logo" width="28" height="28" />
+    <span>Vernya <em>IT</em></span>
+  </div>
+  <p class="footer-tag" data-i18n="footer.tag">We build. You grow.</p>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/vernya_it/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.threads.net/@vernya_it" target="_blank" rel="noopener">Threads</a>
+  </div>
+  <p class="footer-copy"><span data-i18n="footer.copyPrefix">©</span> <span id="year"></span> Vernya IT. <span data-i18n="footer.copySuffix">All rights reserved.</span></p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/i18n.js"></script>
+</body>
+</html>

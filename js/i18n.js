@@ -1,0 +1,364 @@
+const I18N = {
+en: {
+  "nav.about": "About",
+  "nav.services": "Services",
+  "nav.work": "Work",
+  "nav.contact": "Contact",
+  "nav.sayhi": "Say hi",
+  "nav.sayhi.mobile": "Say hi ↗",
+  "footer.tag": "We build. You grow.",
+  "footer.copyPrefix": "©",
+  "footer.copySuffix": "Vernya IT. All rights reserved.",
+  "breadcrumb.home": "Home",
+
+  "btn.startProject": "Start a project",
+  "btn.seeWhatWeDo": "See what we do",
+  "btn.dmInstagram": "DM us on Instagram",
+  "btn.followThreads": "Follow on Threads",
+  "btn.seeServices": "See our services",
+  "btn.backHome": "Back to home",
+  "btn.seeAllServices": "See all services →",
+
+  "svc.web.title": "Web Design & Development",
+  "svc.mobile.title": "Mobile App Development",
+  "svc.uiux.title": "UI/UX Design",
+
+  "home.hero.eyebrow": "Software studio · web · mobile · UI/UX",
+  "home.hero.title1": "We build.",
+  "home.hero.title2": "You grow.",
+  "home.hero.sub": "Vernya IT is a software development partner crafting web, mobile & UI/UX products at the cutting edge of digital innovation — from idea to finished product.",
+  "home.marquee.web": "Web Design",
+  "home.marquee.mobile": "Mobile Apps",
+  "home.marquee.uiux": "UI/UX",
+  "home.marquee.strategy": "Product Strategy",
+
+  "home.about.kicker": "About",
+  "home.about.title": "From idea to finished product.",
+  "home.about.copy": "We're a small, focused studio that partners with founders and teams to turn ambitious ideas into products people actually use. No hand-offs, no bloated process — just design and engineering working as one team, end to end.",
+  "home.about.stat1": "Disciplines under one roof",
+  "home.about.stat2": "Team, zero hand-offs",
+  "home.about.stat3": "% invested in your outcome",
+
+  "home.services.kicker": "Services",
+  "home.services.title": "What we build",
+  "svc.web.descShort": "Fast, modern, pixel-precise websites and web apps built to convert and built to last.",
+  "svc.mobile.descShort": "Native-feel iOS & Android apps engineered for smooth performance and real growth.",
+  "svc.uiux.descShort": "Interfaces that feel obvious in hindsight — researched, tested, and crafted in detail.",
+
+  "home.switcher.kicker": "See it in motion",
+  "home.switcher.title": "Pick your track",
+  "tab.web": "Web",
+  "tab.mobile": "Mobile",
+  "tab.uiux": "UI/UX",
+  "switcher.web.f1": "Marketing sites & full web apps",
+  "switcher.web.f2": "Design systems built to scale",
+  "switcher.web.f3": "Fast loads, clean Lighthouse scores",
+  "switcher.mobile.f1": "Cross-platform, native-feel apps",
+  "switcher.mobile.f2": "Onboarding, auth & payments done right",
+  "switcher.mobile.f3": "Analytics wired in from launch",
+  "switcher.uiux.f1": "Research & flow-mapping first",
+  "switcher.uiux.f2": "Wireframes through hi-fi screens",
+  "switcher.uiux.f3": "Accessibility from the first draft",
+
+  "home.process.kicker": "Process",
+  "home.process.title": "How we get there",
+  "step1.title": "Idea",
+  "step1.desc": "We start with a conversation — your goals, users, and constraints.",
+  "step2.title": "Design",
+  "step2.desc": "Flows, screens, and a visual language your product can grow into.",
+  "step3.title": "Build",
+  "step3.desc": "Clean, tested code shipped in tight, visible iterations.",
+  "step4.title": "Grow",
+  "step4.desc": "We stick around post-launch to refine what the data tells us.",
+
+  "home.cta.kicker": "Contact",
+  "home.cta.title": "Ready to build<br/>something great?",
+  "home.cta.sub": "We keep it simple — DM us and let's talk about your project.",
+
+  "about.hero.title": "We're a small studio that builds like a big one cares.",
+  "about.hero.sub": "Vernya IT partners with founders and teams to turn ambitious ideas into products people actually use — design and engineering working as one team, end to end.",
+  "about.marquee.curious": "Curious",
+  "about.marquee.honest": "Honest",
+  "about.marquee.fast": "Fast",
+  "about.marquee.reliable": "Reliable",
+
+  "about.story.kicker": "Our story",
+  "about.story.title": "Why Vernya exists.",
+  "about.story.p1": "Most studios hand your project between strategists, designers and engineers — and something gets lost at every handoff. We got tired of watching that happen, so we built Vernya around the opposite idea: one small team, present from the first sketch to the last deploy.",
+  "about.story.p2": "That means fewer meetings, faster decisions, and a product that actually looks the way it was designed — because the person who designed it is the person who shipped it.",
+  "about.stat4": "Hour average DM response",
+
+  "about.values.kicker": "What we believe",
+  "about.values.title": "How we work",
+  "value1.title": "Ship fast, ship right",
+  "value1.desc": "Momentum matters, but not at the cost of a product you'll be fixing for years.",
+  "value2.title": "No black boxes",
+  "value2.desc": "You see the design files, the code, and the reasoning behind every decision.",
+  "value3.title": "Design and code, together",
+  "value3.desc": "The same people carry an idea from wireframe to production. Nothing gets lost translating.",
+  "value4.title": "We stay after launch",
+  "value4.desc": "Ship day isn't the finish line — we watch the data and keep tuning what matters.",
+
+  "about.cta.kicker": "Say hi",
+  "about.cta.title": "Like how we think?<br/>Let's talk.",
+
+  "services.hero.titlePre": "Everything you need to go ",
+  "services.hero.titleAccent": "from idea to shipped product.",
+  "services.hero.sub": "Three disciplines, one team. We don't hand your project between departments — the people who design it are the people who build it.",
+
+  "svc.web.descLong": "Fast, modern, pixel-precise websites and web apps — built to convert visitors and built to last.",
+  "svc.web.f1": "Marketing sites, product landing pages, and full web apps",
+  "svc.web.f2": "Design systems that keep growing products consistent",
+  "svc.web.f3": "Performance-first builds: fast loads, clean Lighthouse scores",
+  "svc.web.f4": "CMS & e-commerce integrations when you need to self-serve content",
+  "svc.web.f5": "SEO-friendly structure and semantic markup from day one",
+
+  "svc.mobile.descLong": "Native-feel iOS & Android apps engineered for smooth performance and real, measurable growth.",
+  "svc.mobile.f1": "Cross-platform builds that still feel native on each OS",
+  "svc.mobile.f2": "Onboarding, auth, and payments done right the first time",
+  "svc.mobile.f3": "Push notifications, offline support, and app-store readiness",
+  "svc.mobile.f4": "Analytics wired in so you can see what's actually working",
+  "svc.mobile.f5": "Ongoing releases — we don't disappear after v1.0",
+
+  "svc.uiux.descLong": "Interfaces that feel obvious in hindsight — researched, tested, and crafted down to the last detail.",
+  "svc.uiux.f1": "User research and flow-mapping before a single pixel is placed",
+  "svc.uiux.f2": "Wireframes through to high-fidelity, developer-ready screens",
+  "svc.uiux.f3": "Interaction & motion design that make products feel alive",
+  "svc.uiux.f4": "Design QA during build, so nothing gets lost in translation",
+  "svc.uiux.f5": "Accessibility considered from the first draft, not bolted on later",
+
+  "services.cta.kicker": "Next step",
+  "services.cta.title": "Not sure which one<br/>you need?",
+  "services.cta.sub": "Tell us what you're building — we'll tell you where to start.",
+
+  "contact.hero.titlePre": "Let's build ",
+  "contact.hero.titleAccent": "something great.",
+  "contact.hero.sub": "We keep it simple — no long forms, no discovery-call funnel. Send us a DM and let's talk about your project.",
+  "contact.card.title": "Reach us directly",
+  "contact.row.instagram": "Instagram — @vernya_it",
+  "contact.row.threads": "Threads — @vernya_it",
+  "contact.tips.kicker": "In your message",
+  "contact.tips.title": "What to include",
+  "contact.tip1": "What you're building — web, mobile, UI/UX, or all three",
+  "contact.tip2": "Rough timeline and whether there's a hard launch date",
+  "contact.tip3": "Budget range, even a loose one — it helps us scope fast",
+  "contact.tip4": "Links to anything that already exists: a site, a deck, a Figma file",
+  "contact.trust": "Got an NDA? Send it over — we're happy to sign before any details are shared. We typically reply within 24 hours.",
+
+  "work.hero.titlePre": "Our work, ",
+  "work.hero.titleAccent": "in progress.",
+  "work.hero.sub": "Vernya IT is a young studio — we're still early enough that we'd rather show you nothing than show you something fake. Real case studies land here as projects ship. Here's a preview of what that will look like.",
+  "work.banner": "Case studies coming soon — every card below is a placeholder, not a real project.",
+  "work.tag": "Placeholder",
+  "work.card1.title": "Web Platform",
+  "work.card1.category": "Category: Web Design & Development",
+  "work.card2.title": "Mobile App",
+  "work.card2.category": "Category: Mobile App Development",
+  "work.card3.title": "Product Redesign",
+  "work.card3.category": "Category: UI/UX Design",
+  "work.cta.kicker": "Be the first",
+  "work.cta.title": "Want to be our<br/>first case study?",
+  "work.cta.sub": "Start a project with us now and you could be the one we feature here."
+},
+
+sr: {
+  "nav.about": "O nama",
+  "nav.services": "Usluge",
+  "nav.work": "Radovi",
+  "nav.contact": "Kontakt",
+  "nav.sayhi": "Javi se",
+  "nav.sayhi.mobile": "Javi se ↗",
+  "footer.tag": "Mi gradimo. Vi rastete.",
+  "footer.copyPrefix": "©",
+  "footer.copySuffix": "Vernya IT. Sva prava zadržana.",
+  "breadcrumb.home": "Početna",
+
+  "btn.startProject": "Pokreni projekat",
+  "btn.seeWhatWeDo": "Pogledaj šta radimo",
+  "btn.dmInstagram": "Pošalji poruku na Instagramu",
+  "btn.followThreads": "Zaprati nas na Threads-u",
+  "btn.seeServices": "Pogledaj naše usluge",
+  "btn.backHome": "Nazad na početnu",
+  "btn.seeAllServices": "Pogledaj sve usluge →",
+
+  "svc.web.title": "Web dizajn i razvoj",
+  "svc.mobile.title": "Razvoj mobilnih aplikacija",
+  "svc.uiux.title": "UI/UX dizajn",
+
+  "home.hero.eyebrow": "Softverski studio · web · mobilne · UI/UX",
+  "home.hero.title1": "Mi gradimo.",
+  "home.hero.title2": "Vi rastete.",
+  "home.hero.sub": "Vernya IT je partner za razvoj softvera koji kreira web, mobilne i UI/UX proizvode na vrhuncu digitalne inovacije — od ideje do gotovog proizvoda.",
+  "home.marquee.web": "Web dizajn",
+  "home.marquee.mobile": "Mobilne aplikacije",
+  "home.marquee.uiux": "UI/UX",
+  "home.marquee.strategy": "Strategija proizvoda",
+
+  "home.about.kicker": "O nama",
+  "home.about.title": "Od ideje do gotovog proizvoda.",
+  "home.about.copy": "Mi smo mali, fokusiran studio koji sarađuje sa osnivačima i timovima kako bi ambiciozne ideje pretvorio u proizvode koje ljudi zaista koriste. Bez predaje projekta iz ruke u ruku, bez glomaznog procesa — samo dizajn i razvoj koji rade kao jedan tim, od početka do kraja.",
+  "home.about.stat1": "Discipline pod jednim krovom",
+  "home.about.stat2": "Tim, nula predaja",
+  "home.about.stat3": "% posvećenosti vašem rezultatu",
+
+  "home.services.kicker": "Usluge",
+  "home.services.title": "Šta gradimo",
+  "svc.web.descShort": "Brzi, moderni sajtovi i web aplikacije precizni do piksela — napravljeni da konvertuju i traju.",
+  "svc.mobile.descShort": "iOS i Android aplikacije sa osećajem nativnih, dizajnirane za glatke performanse i realan rast.",
+  "svc.uiux.descShort": "Interfejsi koji deluju očigledno tek kad ih vidite — istraženi, testirani i pažljivo napravljeni.",
+
+  "home.switcher.kicker": "Pogledaj u pokretu",
+  "home.switcher.title": "Izaberi svoj pravac",
+  "tab.web": "Web",
+  "tab.mobile": "Mobilne",
+  "tab.uiux": "UI/UX",
+  "switcher.web.f1": "Marketing sajtovi i kompletne web aplikacije",
+  "switcher.web.f2": "Dizajn sistemi napravljeni da rastu",
+  "switcher.web.f3": "Brzo učitavanje, čisti Lighthouse rezultati",
+  "switcher.mobile.f1": "Aplikacije za više platformi, sa nativnim osećajem",
+  "switcher.mobile.f2": "Onboarding, prijava i plaćanja urađeni kako treba",
+  "switcher.mobile.f3": "Analitika uključena od samog starta",
+  "switcher.uiux.f1": "Prvo istraživanje i mapiranje toka",
+  "switcher.uiux.f2": "Od wireframe-ova do finalnih ekrana",
+  "switcher.uiux.f3": "Pristupačnost od prve verzije",
+
+  "home.process.kicker": "Proces",
+  "home.process.title": "Kako dolazimo do cilja",
+  "step1.title": "Ideja",
+  "step1.desc": "Počinjemo razgovorom — vaši ciljevi, korisnici i ograničenja.",
+  "step2.title": "Dizajn",
+  "step2.desc": "Tokovi, ekrani i vizuelni jezik u koji vaš proizvod može da raste.",
+  "step3.title": "Izrada",
+  "step3.desc": "Čist, testiran kod isporučen kroz kratke, vidljive iteracije.",
+  "step4.title": "Rast",
+  "step4.desc": "Ostajemo tu i posle lansiranja da doradimo ono što nam podaci pokažu.",
+
+  "home.cta.kicker": "Kontakt",
+  "home.cta.title": "Spremni da napravimo<br/>nešto sjajno?",
+  "home.cta.sub": "Jednostavno je — pošaljite nam poruku i popričajmo o vašem projektu.",
+
+  "about.hero.title": "Mi smo mali studio koji gradi sa pažnjom kakvu bi imao veliki.",
+  "about.hero.sub": "Vernya IT sarađuje sa osnivačima i timovima kako bi ambiciozne ideje pretvorila u proizvode koje ljudi zaista koriste — dizajn i razvoj rade kao jedan tim, od početka do kraja.",
+  "about.marquee.curious": "Radoznali",
+  "about.marquee.honest": "Iskreni",
+  "about.marquee.fast": "Brzi",
+  "about.marquee.reliable": "Pouzdani",
+
+  "about.story.kicker": "Naša priča",
+  "about.story.title": "Zašto Vernya postoji.",
+  "about.story.p1": "Većina studija prosleđuje vaš projekat između stratega, dizajnera i programera — i nešto se izgubi pri svakoj predaji. Dosadilo nam je da to gledamo, pa smo Vernyu izgradili na suprotnoj ideji: jedan mali tim, prisutan od prve skice do poslednjeg lansiranja.",
+  "about.story.p2": "To znači manje sastanaka, brže odluke i proizvod koji zaista izgleda onako kako je zamišljen — jer je osoba koja ga je dizajnirala ista ona koja ga je i isporučila.",
+  "about.stat4": "Sati prosečan odgovor na poruku",
+
+  "about.values.kicker": "U šta verujemo",
+  "about.values.title": "Kako radimo",
+  "value1.title": "Brzo i kako treba",
+  "value1.desc": "Tempo je bitan, ali ne po cenu proizvoda koji ćete popravljati godinama.",
+  "value2.title": "Bez crnih kutija",
+  "value2.desc": "Vidite dizajn fajlove, kod i razmišljanje iza svake odluke.",
+  "value3.title": "Dizajn i kod, zajedno",
+  "value3.desc": "Isti ljudi nose ideju od skice do produkcije. Ništa se ne izgubi u prevodu.",
+  "value4.title": "Ostajemo i posle lansiranja",
+  "value4.desc": "Dan lansiranja nije cilj — pratimo podatke i dalje doterujemo ono što je bitno.",
+
+  "about.cta.kicker": "Javi se",
+  "about.cta.title": "Sviđa vam se kako razmišljamo?<br/>Popričajmo.",
+
+  "services.hero.titlePre": "Sve što vam treba da stignete ",
+  "services.hero.titleAccent": "od ideje do gotovog proizvoda.",
+  "services.hero.sub": "Tri discipline, jedan tim. Ne prosleđujemo vaš projekat između odeljenja — ljudi koji ga dizajniraju su isti oni koji ga i grade.",
+
+  "svc.web.descLong": "Brzi, moderni sajtovi i web aplikacije precizni do piksela — napravljeni da konvertuju posetioce i traju dugo.",
+  "svc.web.f1": "Marketing sajtovi, landing stranice i kompletne web aplikacije",
+  "svc.web.f2": "Dizajn sistemi koji održavaju konzistentnost proizvoda dok raste",
+  "svc.web.f3": "Fokus na performanse: brzo učitavanje, čisti Lighthouse rezultati",
+  "svc.web.f4": "CMS i e-commerce integracije kad želite sami da upravljate sadržajem",
+  "svc.web.f5": "SEO-prijateljska struktura i semantički kod od prvog dana",
+
+  "svc.mobile.descLong": "iOS i Android aplikacije sa osećajem nativnih, napravljene za glatke performanse i merljiv rast.",
+  "svc.mobile.f1": "Aplikacije za više platformi koje ipak deluju nativno na svakom sistemu",
+  "svc.mobile.f2": "Onboarding, prijava i plaćanja urađeni kako treba, od prve verzije",
+  "svc.mobile.f3": "Push notifikacije, rad bez interneta i spremnost za app store",
+  "svc.mobile.f4": "Ugrađena analitika da vidite šta zaista funkcioniše",
+  "svc.mobile.f5": "Kontinuirana ažuriranja — ne nestajemo posle verzije 1.0",
+
+  "svc.uiux.descLong": "Interfejsi koji deluju očigledno tek kad ih vidite — istraženi, testirani i doterani do poslednjeg detalja.",
+  "svc.uiux.f1": "Istraživanje korisnika i mapiranje toka pre nego što se postavi ijedan piksel",
+  "svc.uiux.f2": "Od wireframe-ova do finalnih ekrana spremnih za razvoj",
+  "svc.uiux.f3": "Dizajn interakcija i animacija koji proizvod čine živim",
+  "svc.uiux.f4": "Kontrola dizajna tokom razvoja, da ništa ne bude izgubljeno u prevodu",
+  "svc.uiux.f5": "Pristupačnost planirana od prve verzije, ne dodata naknadno",
+
+  "services.cta.kicker": "Sledeći korak",
+  "services.cta.title": "Niste sigurni šta<br/>vam treba?",
+  "services.cta.sub": "Recite nam šta gradite — mi ćemo vam reći odakle da počnete.",
+
+  "contact.hero.titlePre": "Hajde da napravimo ",
+  "contact.hero.titleAccent": "nešto sjajno.",
+  "contact.hero.sub": "Jednostavno je — bez dugačkih formulara, bez poziva za \"upoznavanje\". Pošaljite nam poruku i popričajmo o vašem projektu.",
+  "contact.card.title": "Kontaktirajte nas direktno",
+  "contact.row.instagram": "Instagram — @vernya_it",
+  "contact.row.threads": "Threads — @vernya_it",
+  "contact.tips.kicker": "U vašoj poruci",
+  "contact.tips.title": "Šta da uključite",
+  "contact.tip1": "Šta gradite — web, mobilne, UI/UX ili sve troje",
+  "contact.tip2": "Okvirni rok i da li postoji fiksni datum lansiranja",
+  "contact.tip3": "Okvirni budžet, makar približan — pomaže nam da brzo procenimo obim",
+  "contact.tip4": "Linkove ka svemu što već postoji: sajt, prezentacija, Figma fajl",
+  "contact.trust": "Imate NDA? Pošaljite nam ga — rado ćemo ga potpisati pre nego što podelite detalje. Obično odgovaramo u roku od 24 sata.",
+
+  "work.hero.titlePre": "Naši radovi, ",
+  "work.hero.titleAccent": "u nastajanju.",
+  "work.hero.sub": "Vernya IT je mlad studio — još uvek smo dovoljno mladi da radije ne pokažemo ništa nego da pokažemo nešto lažno. Prave studije slučaja stižu ovde kako projekti budu završavani. Evo pregleda kako će to izgledati.",
+  "work.banner": "Studije slučaja uskoro stižu — svaka kartica ispod je samo primer, ne pravi projekat.",
+  "work.tag": "Primer",
+  "work.card1.title": "Web platforma",
+  "work.card1.category": "Kategorija: Web dizajn i razvoj",
+  "work.card2.title": "Mobilna aplikacija",
+  "work.card2.category": "Kategorija: Razvoj mobilnih aplikacija",
+  "work.card3.title": "Redizajn proizvoda",
+  "work.card3.category": "Kategorija: UI/UX dizajn",
+  "work.cta.kicker": "Budite prvi",
+  "work.cta.title": "Želite da budete naša<br/>prva studija slučaja?",
+  "work.cta.sub": "Pokrenite projekat sa nama sada i možda baš vi budete ovde predstavljeni."
+}
+};
+
+function applyLanguage(lang) {
+  if (!I18N[lang]) lang = 'en';
+  document.documentElement.lang = lang;
+  localStorage.setItem('vernya-lang', lang);
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.dataset.i18n;
+    const value = I18N[lang][key];
+    if (value === undefined) return;
+    if (el.dataset.i18nHtml === 'true') {
+      el.innerHTML = value;
+    } else {
+      el.textContent = value;
+    }
+  });
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.classList.toggle('is-active', btn.dataset.lang === lang);
+  });
+
+  if (window.VernyaAnim) {
+    window.VernyaAnim.letterSwap.init();
+    window.VernyaAnim.splitText.init();
+  }
+
+  window.dispatchEvent(new CustomEvent('vernya:langchange', { detail: { lang } }));
+}
+
+function getStoredLanguage() {
+  return localStorage.getItem('vernya-lang') || 'en';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  applyLanguage(getStoredLanguage());
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+  });
+});

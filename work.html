@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work — Vernya IT</title>
+<meta name="description" content="Vernya IT's work in progress. Real case studies are on the way as projects ship." />
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-dot" id="cursorDot"><span class="cursor-ring"></span></div>
+
+<header class="nav" id="nav">
+  <a href="index.html" class="brand">
+    <img src="assets/logo.svg" alt="Vernya IT logo" width="34" height="34" />
+    <span>Vernya <em>IT</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="work.html" data-i18n="nav.work">Work</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="lang-switch">
+    <button class="lang-btn is-active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="sr">SR</button>
+  </div>
+  <a class="btn btn-ghost magnetic" href="contact.html" data-i18n="nav.sayhi">
+    <span>Say hi</span>
+  </a>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="about.html" data-i18n="nav.about">About</a>
+  <a href="services.html" data-i18n="nav.services">Services</a>
+  <a href="work.html" data-i18n="nav.work">Work</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="contact.html" data-i18n="nav.sayhi.mobile">Say hi ↗</a>
+  <div class="lang-switch lang-switch-mobile">
+    <button class="lang-btn is-active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="sr">SR</button>
+  </div>
+</div>
+
+<main>
+
+  <section class="page-hero">
+    <canvas class="network-canvas" id="networkCanvas"></canvas>
+    <div class="breadcrumb" data-reveal>
+      <a href="index.html" data-i18n="breadcrumb.home">Home</a><span>/</span><span data-i18n="nav.work">Work</span>
+    </div>
+    <h1 class="page-hero-title" data-reveal>
+      <span data-i18n="work.hero.titlePre">Our work, </span><span class="accent" data-i18n="work.hero.titleAccent">in progress.</span>
+    </h1>
+    <p class="page-hero-sub" data-reveal data-i18n="work.hero.sub">
+      Vernya IT is a young studio — we're still early enough that we'd rather
+      show you nothing than show you something fake. Real case studies land
+      here as projects ship. Here's a preview of what that will look like.
+    </p>
+  </section>
+
+  <section style="padding-top: 20px;">
+    <div class="coming-soon-banner" data-reveal>
+      <span class="pulse-dot"></span>
+      <span data-i18n="work.banner">Case studies coming soon — every card below is a placeholder, not a real project.</span>
+    </div>
+
+    <div class="card-grid work-grid">
+      <article class="work-card" data-reveal>
+        <div class="work-thumb shimmer"></div>
+        <span class="work-tag" data-i18n="work.tag">Placeholder</span>
+        <h3 data-i18n="work.card1.title">Web Platform</h3>
+        <p data-i18n="work.card1.category">Category: Web Design &amp; Development</p>
+      </article>
+
+      <article class="work-card" data-reveal>
+        <div class="work-thumb shimmer"></div>
+        <span class="work-tag" data-i18n="work.tag">Placeholder</span>
+        <h3 data-i18n="work.card2.title">Mobile App</h3>
+        <p data-i18n="work.card2.category">Category: Mobile App Development</p>
+      </article>
+
+      <article class="work-card" data-reveal>
+        <div class="work-thumb shimmer"></div>
+        <span class="work-tag" data-i18n="work.tag">Placeholder</span>
+        <h3 data-i18n="work.card3.title">Product Redesign</h3>
+        <p data-i18n="work.card3.category">Category: UI/UX Design</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="cta-blob" aria-hidden="true"></div>
+    <p class="section-kicker" data-reveal data-i18n="work.cta.kicker">Be the first</p>
+    <h2 class="cta-title" data-reveal data-i18n="work.cta.title" data-i18n-html="true">Want to be our<br/>first case study?</h2>
+    <p class="cta-sub" data-reveal data-i18n="work.cta.sub">Start a project with us now and you could be the one we feature here.</p>
+    <div class="hero-cta" data-reveal>
+      <a class="btn btn-primary magnetic" href="contact.html">
+        <span data-i18n="btn.startProject">Start a project</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn-outline magnetic" href="services.html">
+        <span data-i18n="btn.seeServices">See our services</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <img src="assets/logo.svg" alt="Vernya IT logo" width="28" height="28" />
+    <span>Vernya <em>IT</em></span>
+  </div>
+  <p class="footer-tag" data-i18n="footer.tag">We build. You grow.</p>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/vernya_it/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.threads.net/@vernya_it" target="_blank" rel="noopener">Threads</a>
+  </div>
+  <p class="footer-copy"><span data-i18n="footer.copyPrefix">©</span> <span id="year"></span> Vernya IT. <span data-i18n="footer.copySuffix">All rights reserved.</span></p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Claude Code tooling (not part of the site)
+.claude/
+.agents/
+.codex/
+.impeccable/
+skills-lock.json
+
+# Contains a live API key - never commit
+.mcp.json
+
+# OS/editor
+.DS_Store
+Thumbs.db
