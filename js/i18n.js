@@ -166,9 +166,21 @@ en: {
 
   "work.hero.titlePre": "Our work, ",
   "work.hero.titleAccent": "in progress.",
-  "work.hero.sub": "Vernya IT is a young studio. We're still early enough that we'd rather show you nothing than show you something fake. Real case studies land here as projects ship. Here's a preview of what that will look like.",
-  "work.banner": "Case studies coming soon. Every card below is a placeholder, not a real project.",
+  "work.hero.sub": "Vernya IT is a young studio. We're still early enough that we'd rather show you nothing than show you something fake, so the first case study below is real and the rest are clearly marked placeholders until more ship.",
+  "work.banner": "One real case study below. Every other card is a placeholder, not a real project.",
   "work.tag": "Placeholder",
+  "work.featured.tag": "Real project",
+  "work.featured.title": "Adspace Agency",
+  "work.featured.desc": "Adspace is a full-service strategy, design, and digital marketing agency. We designed and built their website and brand identity from the ground up, aiming for something that felt as bold and confident as their positioning.",
+  "work.featured.client": "Client",
+  "work.featured.clientVal": "Adspace agency",
+  "work.featured.services": "Services",
+  "work.featured.servicesVal": "Website design, Brand identity",
+  "work.featured.year": "Year",
+  "work.featured.yearVal": "2025",
+  "work.featured.coverAlt": "Adspace agency website homepage design, showing the 'Reach New Horizons' hero section on a laptop mockup",
+  "work.featured.devicesAlt": "Adspace agency website shown across multiple phone mockups, including testimonials, service pillars, and case study previews",
+  "work.featured.homepageAlt": "Adspace agency homepage shown on a laptop, featuring the 'We Help Companies Grow' section and client case study cards",
   "work.card1.title": "Web Platform",
   "work.card1.category": "Category: Web Design & Development",
   "work.card2.title": "Mobile App",
@@ -382,9 +394,21 @@ sr: {
 
   "work.hero.titlePre": "Naši radovi, ",
   "work.hero.titleAccent": "u nastajanju.",
-  "work.hero.sub": "Vernya IT je mlad studio. Još uvek smo dovoljno mladi da radije ne pokažemo ništa nego da pokažemo nešto lažno. Prave studije slučaja stižu ovde kako projekti budu završavani. Evo pregleda kako će to izgledati.",
-  "work.banner": "Studije slučaja uskoro stižu. Svaka kartica ispod je samo primer, ne pravi projekat.",
+  "work.hero.sub": "Vernya IT je mlad studio. Još uvek smo dovoljno mladi da radije ne pokažemo ništa nego da pokažemo nešto lažno, zato je prva studija slučaja ispod prava, a ostale su jasno označene kao primeri dok ne stignu prave.",
+  "work.banner": "Jedna prava studija slučaja ispod. Svaka druga kartica je samo primer, ne pravi projekat.",
   "work.tag": "Primer",
+  "work.featured.tag": "Pravi projekat",
+  "work.featured.title": "Adspace Agency",
+  "work.featured.desc": "Adspace je full-service agencija za strategiju, dizajn i digitalni marketing. Dizajnirali smo i izgradili njihov sajt i brend identitet od nule, sa ciljem da deluje jednako smelo i samouvereno kao i njihovo pozicioniranje.",
+  "work.featured.client": "Klijent",
+  "work.featured.clientVal": "Adspace agency",
+  "work.featured.services": "Usluge",
+  "work.featured.servicesVal": "Dizajn sajta, Brend identitet",
+  "work.featured.year": "Godina",
+  "work.featured.yearVal": "2025",
+  "work.featured.coverAlt": "Dizajn početne stranice Adspace agencije, sa 'Reach New Horizons' hero sekcijom na maketi laptopa",
+  "work.featured.devicesAlt": "Sajt Adspace agencije prikazan na više maketa telefona, uključujući preporuke, stubove usluga i preglede studija slučaja",
+  "work.featured.homepageAlt": "Početna stranica Adspace agencije na laptopu, sa sekcijom 'We Help Companies Grow' i karticama studija slučaja klijenata",
   "work.card1.title": "Web platforma",
   "work.card1.category": "Kategorija: Web dizajn i razvoj",
   "work.card2.title": "Mobilna aplikacija",
@@ -453,6 +477,11 @@ function applyLanguage(lang) {
   document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
     const value = I18N[lang][el.dataset.i18nPlaceholder];
     if (value !== undefined) el.placeholder = value;
+  });
+
+  document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    const value = I18N[lang][el.dataset.i18nAlt];
+    if (value !== undefined) el.alt = value;
   });
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
