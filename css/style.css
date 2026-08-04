@@ -459,6 +459,34 @@ section {
   background-clip: text;
   color: transparent;
 }
+
+/* "We build." rises into place like something under construction;
+   "You grow." scales up from underneath it, literally growing in. */
+.hero-title .line-build {
+  clip-path: inset(100% 0 0 0);
+  transform: translateY(10px);
+  animation: heroBuild 720ms cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+.hero-title .line-grow {
+  transform-origin: left center;
+  animation: heroGrow 720ms cubic-bezier(0.65, 0, 0.35, 1) 280ms both;
+}
+@keyframes heroBuild {
+  from { clip-path: inset(100% 0 0 0); transform: translateY(10px); }
+  to   { clip-path: inset(0% 0 0 0); transform: translateY(0); }
+}
+@keyframes heroGrow {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-title .line-build, .hero-title .line-grow {
+    animation: none;
+    clip-path: none;
+    transform: none;
+    opacity: 1;
+  }
+}
 .hero-sub {
   max-width: 580px;
   margin-top: 28px;
