@@ -7,6 +7,10 @@ function applyTheme(theme) {
     btn.classList.toggle('is-active', btn.dataset.themeBtn === theme);
   });
 
+  document.querySelectorAll('img[src*="logo"]').forEach((img) => {
+    img.src = theme === 'light' ? 'assets/logo-light.svg' : 'assets/logo.svg';
+  });
+
   window.dispatchEvent(new CustomEvent('vernya:themechange', { detail: { theme } }));
 }
 

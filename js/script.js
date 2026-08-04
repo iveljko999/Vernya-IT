@@ -257,9 +257,9 @@ if (!isCoarse) {
   window.addEventListener('resize', resize);
 
   const colors = [
-    ['0,255,102', 0.16],  // neon green
-    ['0,204,82', 0.13],   // deeper green
-    ['0,255,140', 0.11],  // bright mint
+    ['198,229,42', 0.16], // lime accent
+    ['159,192,30', 0.13], // deeper lime
+    ['228,243,92', 0.11], // pale chartreuse
     ['10,10,10', 0.05],   // ink, for depth (swapped to light in dark theme)
   ];
 
@@ -490,8 +490,8 @@ if (!isCoarse) {
     nodes.forEach((n) => {
       ctx.beginPath();
       ctx.arc(n.x * w, n.y * h, n.r * dpr, 0, Math.PI * 2);
-      ctx.fillStyle = '#00ff66';
-      ctx.shadowColor = 'rgba(0,255,102,0.8)';
+      ctx.fillStyle = '#c6e52a';
+      ctx.shadowColor = 'rgba(198,229,42,0.8)';
       ctx.shadowBlur = 6 * dpr;
       ctx.fill();
       ctx.shadowBlur = 0;

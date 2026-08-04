@@ -85,14 +85,14 @@
   color: var(--text);
   transition: transform .3s var(--ease-spring), border-color .3s var(--ease-out), box-shadow .35s var(--ease-out);
 }
-.pricing-card:hover { border-color: rgba(0,255,102,0.4); }
+.pricing-card:hover { border-color: rgba(198,229,42,0.4); }
 .pricing-card:active { transform: scale(0.97); }
 @media (hover: hover) and (pointer: fine) {
   .pricing-card:hover { transform: translateY(-3px); }
 }
 .pricing-card.is-selected {
   border-color: var(--neon);
-  box-shadow: 0 0 0 1px var(--neon), 0 10px 30px rgba(0,255,102,0.22);
+  box-shadow: 0 0 0 1px var(--neon), 0 10px 30px rgba(198,229,42,0.22);
 }
 
 .pricing-card-check {
