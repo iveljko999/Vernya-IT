@@ -435,6 +435,39 @@ if (!isCoarse) {
   window.addEventListener('vernya:langchange', syncHeight);
 })();
 
+// ---------- phone mockup carousel (homepage) ----------
+(function phoneCarousel() {
+  const mockup = document.querySelector('.phone-mockup');
+  if (!mockup) return;
+  const slides = mockup.querySelectorAll('.phone-slide');
+  const dots = mockup.querySelectorAll('.phone-dot');
+  if (!slides.length) return;
+
+  let index = 0;
+  let timer;
+
+  function show(i) {
+    index = (i + slides.length) % slides.length;
+    slides.forEach((s, n) => s.classList.toggle('is-active', n === index));
+    dots.forEach((d, n) => d.classList.toggle('is-active', n === index));
+  }
+
+  function start() {
+    stop();
+    timer = setInterval(() => show(index + 1), 3200);
+  }
+  function stop() { clearInterval(timer); }
+
+  dots.forEach((dot, n) => {
+    dot.addEventListener('click', () => { show(n); start(); });
+  });
+  mockup.addEventListener('mouseenter', stop);
+  mockup.addEventListener('mouseleave', start);
+
+  show(0);
+  start();
+})();
+
 // ---------- circuit network animation (subpages) ----------
 (function networkBackground() {
   const canvas = document.getElementById('networkCanvas');

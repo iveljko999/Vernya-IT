@@ -38,6 +38,9 @@ en: {
   "home.marquee.uiux": "UI/UX",
   "home.marquee.strategy": "Product Strategy",
 
+  "home.phone.title": "Built for every screen.",
+  "home.phone.sub": "From onboarding to checkout, we design and build native-feel apps that hold up on every device, not just the demo.",
+
   "home.about.kicker": "About",
   "home.about.title": "From idea to finished product.",
   "home.about.copy": "We're a small, focused studio that partners with founders and teams to turn ambitious ideas into products people actually use. No hand-offs, no bloated process. Just design and engineering working as one team, end to end.",
@@ -265,6 +268,9 @@ sr: {
   "home.marquee.mobile": "Mobilne aplikacije",
   "home.marquee.uiux": "UI/UX",
   "home.marquee.strategy": "Strategija proizvoda",
+
+  "home.phone.title": "Napravljeno za svaki ekran.",
+  "home.phone.sub": "Od onboardinga do plaćanja, dizajniramo i gradimo aplikacije sa osećajem nativnih koje besprekorno rade na svakom uređaju, ne samo na demo verziji.",
 
   "home.about.kicker": "O nama",
   "home.about.title": "Od ideje do gotovog proizvoda.",
