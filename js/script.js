@@ -7,6 +7,20 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 12);
 }, { passive: true });
 
+// ---------- floating theme switch: reveal after scroll on mobile ----------
+// on narrow viewports, full-width CTAs can sit in the same bottom-right
+// corner on first load, so the switch stays hidden until the user scrolls
+// clear of the hero. Desktop keeps it always visible (see style.css).
+(function themeSwitchReveal() {
+  const themeSwitch = document.querySelector('.theme-switch');
+  if (!themeSwitch) return;
+  function sync() {
+    themeSwitch.classList.toggle('is-visible', window.scrollY > 200);
+  }
+  window.addEventListener('scroll', sync, { passive: true });
+  sync();
+})();
+
 // ---------- mobile menu ----------
 const burger = document.getElementById('navBurger');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -323,7 +337,20 @@ if (!isCoarse) {
   const tabs = document.querySelectorAll('.switcher-tab');
   const indicator = document.querySelector('.switcher-indicator');
   const panels = document.querySelectorAll('.switcher-panel');
+  const panelsContainer = document.querySelector('.switcher-panels');
   if (!tabs.length || !indicator) return;
+
+  // panels are position:absolute (for the cross-fade), so the container
+  // can't auto-size to content — sync its height to whichever panel is
+  // active or the tallest one at the current viewport width, since a
+  // fixed min-height overlaps the next section on narrow single-column
+  // layouts where the panel content stacks taller.
+  function syncHeight() {
+    if (!panelsContainer) return;
+    let tallest = 0;
+    panels.forEach((p) => { tallest = Math.max(tallest, p.scrollHeight); });
+    panelsContainer.style.height = `${tallest}px`;
+  }
 
   // simple critically-damped-ish spring integrator
   let pos = { x: 0, w: 0 };
@@ -393,6 +420,7 @@ if (!isCoarse) {
     target = { x: m.x, w: m.w };
     indicator.style.transform = `translateX(${pos.x}px)`;
     indicator.style.width = `${pos.w}px`;
+    syncHeight();
   }
 
   // wait for fonts/layout to settle before measuring
@@ -402,7 +430,9 @@ if (!isCoarse) {
     const activeTab = document.querySelector('.switcher-tab.is-active') || tabs[0];
     last = performance.now();
     setTarget(activeTab);
+    syncHeight();
   });
+  window.addEventListener('vernya:langchange', syncHeight);
 })();
 
 // ---------- circuit network animation (subpages) ----------
