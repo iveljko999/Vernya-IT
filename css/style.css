@@ -653,15 +653,25 @@ section {
   z-index: 3;
 }
 .phone-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.25);
-  transition: background .3s, width .3s;
+  position: relative;
+  width: 16px; height: 6px;
+  background: none;
   cursor: pointer;
   border: none;
   padding: 0;
 }
-.phone-dot.is-active { background: var(--neon); width: 16px; border-radius: 100px; }
+.phone-dot::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition: background .3s var(--ease-out), transform .3s var(--ease-out);
+}
+.phone-dot.is-active::before { background: var(--neon); transform: scaleX(2.6667); }
 
 /* abstract screen content blocks */
 .ph-bar { height: 10px; border-radius: 6px; background: rgba(255,255,255,0.12); }
