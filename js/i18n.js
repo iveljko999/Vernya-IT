@@ -22,10 +22,12 @@ en: {
   "home.services.tagWeb": "Pixel-precise",
   "home.services.tagMobile": "Native-feel",
   "home.services.tagUiux": "User-first",
+  "home.services.tagAi": "Practical & fast",
 
   "svc.web.title": "Web Design & Development",
   "svc.mobile.title": "Mobile App Development",
   "svc.uiux.title": "UI/UX Design",
+  "svc.ai.title": "AI Consulting",
 
   "home.hero.eyebrow": "Software studio for web, mobile & UI/UX",
   "home.hero.title1": "We build.",
@@ -49,12 +51,14 @@ en: {
   "svc.web.descShort": "Fast, modern, pixel-precise websites and web apps built to convert and built to last.",
   "svc.mobile.descShort": "Native-feel iOS & Android apps engineered for smooth performance and real growth.",
   "svc.uiux.descShort": "Interfaces that feel obvious in hindsight, researched, tested, and crafted in detail.",
+  "svc.ai.descShort": "Practical AI integration and process automation, scoped to save real hours.",
 
   "home.switcher.kicker": "See it in motion",
   "home.switcher.title": "Pick your track",
   "tab.web": "Web",
   "tab.mobile": "Mobile",
   "tab.uiux": "UI/UX",
+  "tab.ai": "AI",
   "switcher.web.f1": "Marketing sites & full web apps",
   "switcher.web.f2": "Design systems built to scale",
   "switcher.web.f3": "Fast loads, clean Lighthouse scores",
@@ -64,6 +68,9 @@ en: {
   "switcher.uiux.f1": "Research & flow-mapping first",
   "switcher.uiux.f2": "Wireframes through hi-fi screens",
   "switcher.uiux.f3": "Accessibility from the first draft",
+  "switcher.ai.f1": "Workflow & process automation audits",
+  "switcher.ai.f2": "AI features scoped, built & integrated",
+  "switcher.ai.f3": "Clear ROI before you commit budget",
 
   "home.process.kicker": "Process",
   "home.process.title": "How we get there",
@@ -109,7 +116,7 @@ en: {
 
   "services.hero.titlePre": "Everything you need to go ",
   "services.hero.titleAccent": "from idea to shipped product.",
-  "services.hero.sub": "Three disciplines, one team. We don't hand your project between departments. The people who design it are the people who build it.",
+  "services.hero.sub": "Four disciplines, one team. We don't hand your project between departments. The people who design it are the people who build it.",
 
   "svc.web.descLong": "Fast, modern, pixel-precise websites and web apps, built to convert visitors and built to last.",
   "svc.web.f1": "Marketing sites, product landing pages, and full web apps",
@@ -131,6 +138,13 @@ en: {
   "svc.uiux.f3": "Interaction & motion design that make products feel alive",
   "svc.uiux.f4": "Design QA during build, so nothing gets lost in translation",
   "svc.uiux.f5": "Accessibility considered from the first draft, not bolted on later",
+
+  "svc.ai.descLong": "Practical AI integration and process automation, scoped around real business outcomes instead of hype.",
+  "svc.ai.f1": "Workflow & process automation audits",
+  "svc.ai.f2": "Custom AI feature scoping and integration into your product",
+  "svc.ai.f3": "Internal tooling and chat/agent workflows for your team",
+  "svc.ai.f4": "Model & vendor selection based on your actual constraints",
+  "svc.ai.f5": "Clear ROI estimates before you commit budget",
 
   "services.cta.kicker": "Next step",
   "services.cta.title": "Not sure which one<br/>you need?",
@@ -224,10 +238,12 @@ sr: {
   "home.services.tagWeb": "Precizno do piksela",
   "home.services.tagMobile": "Osećaj nativne app",
   "home.services.tagUiux": "Fokus na korisnika",
+  "home.services.tagAi": "Praktično i brzo",
 
   "svc.web.title": "Web dizajn i razvoj",
   "svc.mobile.title": "Razvoj mobilnih aplikacija",
   "svc.uiux.title": "UI/UX dizajn",
+  "svc.ai.title": "AI konsalting",
 
   "home.hero.eyebrow": "Softverski studio za web, mobilne i UI/UX",
   "home.hero.title1": "Mi gradimo.",
@@ -251,12 +267,14 @@ sr: {
   "svc.web.descShort": "Brzi, moderni sajtovi i web aplikacije precizni do piksela, napravljeni da konvertuju i traju.",
   "svc.mobile.descShort": "iOS i Android aplikacije sa osećajem nativnih, dizajnirane za glatke performanse i realan rast.",
   "svc.uiux.descShort": "Interfejsi koji deluju očigledno tek kad ih vidite, istraženi, testirani i pažljivo napravljeni.",
+  "svc.ai.descShort": "Praktična AI integracija i automatizacija procesa, osmišljena da uštedi stvarno vreme.",
 
   "home.switcher.kicker": "Pogledaj u pokretu",
   "home.switcher.title": "Izaberi svoj pravac",
   "tab.web": "Web",
   "tab.mobile": "Mobilne",
   "tab.uiux": "UI/UX",
+  "tab.ai": "AI",
   "switcher.web.f1": "Marketing sajtovi i kompletne web aplikacije",
   "switcher.web.f2": "Dizajn sistemi napravljeni da rastu",
   "switcher.web.f3": "Brzo učitavanje, čisti Lighthouse rezultati",
@@ -266,6 +284,9 @@ sr: {
   "switcher.uiux.f1": "Prvo istraživanje i mapiranje toka",
   "switcher.uiux.f2": "Od wireframe-ova do finalnih ekrana",
   "switcher.uiux.f3": "Pristupačnost od prve verzije",
+  "switcher.ai.f1": "Analiza radnih procesa i automatizacije",
+  "switcher.ai.f2": "AI funkcionalnosti osmišljene, izrađene i integrisane",
+  "switcher.ai.f3": "Jasan povrat ulaganja pre nego što odlučite",
 
   "home.process.kicker": "Proces",
   "home.process.title": "Kako dolazimo do cilja",
@@ -311,7 +332,7 @@ sr: {
 
   "services.hero.titlePre": "Sve što vam treba da stignete ",
   "services.hero.titleAccent": "od ideje do gotovog proizvoda.",
-  "services.hero.sub": "Tri discipline, jedan tim. Ne prosleđujemo vaš projekat između odeljenja. Ljudi koji ga dizajniraju su isti oni koji ga i grade.",
+  "services.hero.sub": "Četiri discipline, jedan tim. Ne prosleđujemo vaš projekat između odeljenja. Ljudi koji ga dizajniraju su isti oni koji ga i grade.",
 
   "svc.web.descLong": "Brzi, moderni sajtovi i web aplikacije precizni do piksela, napravljeni da konvertuju posetioce i traju dugo.",
   "svc.web.f1": "Marketing sajtovi, landing stranice i kompletne web aplikacije",
@@ -333,6 +354,13 @@ sr: {
   "svc.uiux.f3": "Dizajn interakcija i animacija koji proizvod čine živim",
   "svc.uiux.f4": "Kontrola dizajna tokom razvoja, da ništa ne bude izgubljeno u prevodu",
   "svc.uiux.f5": "Pristupačnost planirana od prve verzije, ne dodata naknadno",
+
+  "svc.ai.descLong": "Praktična AI integracija i automatizacija procesa, osmišljena oko stvarnih poslovnih rezultata, a ne trendova.",
+  "svc.ai.f1": "Analiza radnih procesa i mogućnosti automatizacije",
+  "svc.ai.f2": "Osmišljavanje i integracija AI funkcionalnosti u vaš proizvod",
+  "svc.ai.f3": "Interni alati i chat/agent radni tokovi za vaš tim",
+  "svc.ai.f4": "Izbor modela i dobavljača na osnovu vaših stvarnih ograničenja",
+  "svc.ai.f5": "Jasna procena povrata ulaganja pre nego što odlučite o budžetu",
 
   "services.cta.kicker": "Sledeći korak",
   "services.cta.title": "Niste sigurni šta<br/>vam treba?",
