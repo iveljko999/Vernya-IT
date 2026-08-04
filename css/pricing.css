@@ -289,6 +289,8 @@
   }
   .best-value-badge { top: 12px; left: 16px; right: auto; }
 
+  .theme-switch { bottom: 88px; }
+
   .mobile-summary-bar {
     display: flex;
     align-items: center;
